@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class TestSort {
+    private  TestSort() {
+        System.out.println("Constructor");
+    }
     public static void main(String[] args) {
         var length = 10000;
         check(length);
