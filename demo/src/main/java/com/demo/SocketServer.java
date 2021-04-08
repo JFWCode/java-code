@@ -33,13 +33,16 @@ public class SocketServer {
                         try {
                             InputStream in = clientSocket.getInputStream();
                             BufferedReader br = new BufferedReader(new InputStreamReader(in));
-                            logger.debug(br.readLine().toString());
+                            logger.debug("Client {}: {}", clientSocket.getPort(), br.readLine());
 
-                            br = new BufferedReader(new InputStreamReader( System.in )) ;
-                            String line = br.readLine();
+                            // get input from cmdline
+                            BufferedReader brCmd = new BufferedReader(new InputStreamReader(System.in));
+                            String line = brCmd.readLine();
+                            logger.debug("Server: {}", line);
+
                             OutputStream out = clientSocket.getOutputStream();
                             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out));
-                            bw.write(line);                            //4
+                            bw.write(line + "\n");                            //4
                             bw.flush();
                             clientSocket.close();                //5
                         } catch (IOException e) {
