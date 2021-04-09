@@ -1,4 +1,4 @@
-package com.wk.Array;
+package com.wk.array;
 
 import java.util.Arrays;
 import java.util.Random;
