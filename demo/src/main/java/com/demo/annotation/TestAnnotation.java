@@ -63,7 +63,7 @@ public class TestAnnotation {
                 MyAnnotation ac = (MyAnnotation) a;
 
                 clz.getMethod(ac.init()).invoke(object);
-                clz.getMethod(ac.init(), String[].class).invoke(object, (Object) new String[", "B"}); // convert to Object
+                clz.getMethod(ac.init(), String[].class).invoke(object, (Object) new String[]{"A", "B"}); // convert to Object
                 clz.getMethod(ac.init(), String[].class).invoke(object, new Object[]{new String[]{"A", "B"}}); // best way
                 clz.getMethod(ac.destroy()).invoke(object);
             }
