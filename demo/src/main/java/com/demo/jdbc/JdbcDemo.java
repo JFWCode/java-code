@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class JdbcDemo {
     @Test
     public void demo1() throws Exception {
-//      rgister manually
+//      register manually
 //      Class.forName("com.ysql.jdbc.Driver");
 
         String url = "jdbc:mysql://127.0.0.1:3307/xxl-job?Unicode=true&characterEncoding=UTF-8&allowMultiQueries=true";
@@ -25,7 +25,7 @@ public class JdbcDemo {
         ResultSet show_tables = statement.executeQuery(sql);
 
         while(show_tables.next()) {
-             get column data by column name
+            // get column data by column name
             String s = show_tables.getString("test_run_id");
             System.out.println(s);
         }
