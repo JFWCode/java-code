@@ -11,7 +11,7 @@ public class JdbcDemo {
     @Test
     public void demo1() throws Exception {
 //      register manually
-//      Class.forName("com.ysql.jdbc.Driver");
+//      Class.forName("com.mysql.jdbc.Driver");
 
         String url = "jdbc:mysql://127.0.0.1:3307/xxl-job?Unicode=true&characterEncoding=UTF-8&allowMultiQueries=true";
         // connect to database
