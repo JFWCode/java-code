@@ -98,7 +98,7 @@ class ArrayQueue {
             return;
         }
 
-        rear ++;
+        rear++;
         arr[rear] = value;
     }
 
